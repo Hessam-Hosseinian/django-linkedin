@@ -11,7 +11,6 @@ from post.models import Post
 def index(request):
     posts = Post.objects.all()
     posts = posts[::-1]
-    datetime = timezone.now()
-    print(datetime)
+
     authuser = request.user
-    return render(request, 'home.html', {'posts': posts, 'datetime': datetime, 'authuser': authuser})
+    return render(request, 'home.html', {'posts': posts, 'authuser': authuser})

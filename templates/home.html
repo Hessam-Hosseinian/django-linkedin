@@ -3,17 +3,20 @@
     <div class="container">
 
         {#---------------------left-sidebar---------------------#}
-        <div class="left-sidebar">
+        <div class="left-sidebar" style="position: sticky; top: 73px" >
             <div class="sidebar-profile-box">
                 <img src="{{ authuser.background_picture.url }}" width="100%">
                 <div class="sidebar-profile-info">
-                    <img src="{{authuser.profile_picture.url}}">
+                    <img src="{{ authuser.profile_picture.url }}">
                     <h1>{{ authuser.first_name }} {{ authuser.last_name }}</h1>
                     <h3>{{ authuser.title }}</h3>
                     <ul>
-                        <li>Your profile views <span>52</span></li>{# todo #}
-                        <li>Your post views <span>323</span></li>{# todo #}
-                        <li>Your connections <span>231</span></li>{# todo #}
+                        <li>Your profile views <span>52</span></li>
+                        {# todo #}
+                        <li>Your post views <span>323</span></li>
+                        {# todo #}
+                        <li>Your connections <span>231</span></li>
+                        {# todo #}
 
                     </ul>
                 </div>
@@ -61,14 +64,18 @@
                     <textarea rows="2" placeholder="Write a post"></textarea>
                 </div>
                 <div class="create-post-links">
-                    <li><img src="../static/icons/photo.jpg" alt="">Photo</li>{# todo #}
-                    <li><img src="../static/icons/photo.jpg" alt="">Video</li>{# todo #}
-                    <li><img src="../static/icons/photo.jpg" alt="">Event</li>{# todo #}
+                    <li><img src="../static/icons/photo.jpg" alt="">Photo</li>
+                    {# todo #}
+                    <li><img src="../static/icons/photo.jpg" alt="">Video</li>
+                    {# todo #}
+                    <li><img src="../static/icons/photo.jpg" alt="">Event</li>
+                    {# todo #}
                     <li>Post</li>
                 </div>
             </div>
-            <div class="post">
-                {% for post in posts %}
+            {% for post in posts %}
+                <div class="post">
+
                     <div class="post-author">
                         <img src="{{ post.author.profile_picture.url }}">
                         <div>
@@ -120,14 +127,13 @@
                         </div>
                     </div>
 
-                {% endfor %}
 
-
-            </div>
+                </div>
+            {% endfor %}
 
         </div>
         {#---------------------right-sidebar---------------------#}{# todo #}
-        <div class="right-sidebar">
+        <div class="right-sidebar"  style="position: sticky; top: 73px">
 
 
             <div class="sidebar-news">
