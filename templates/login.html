@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+
+{% block content %}
+     <style>.form {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        gap: 10px;
+        background-color: white;
+        padding: 2.5em;
+        border-radius: 25px;
+        -webkit-transition: .4s ease-in-out;
+        transition: .4s ease-in-out;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.4) 1px 2px 2px;
+        box-shadow: rgba(0, 0, 0, 0.4) 1px 2px 2px;
+    }
+
+    .form:hover {
+        -webkit-transform: translateX(-0.5em) translateY(-0.5em);
+        -ms-transform: translateX(-0.5em) translateY(-0.5em);
+        transform: translateX(-0.5em) translateY(-0.5em);
+        border: 1px solid #171717;
+        -webkit-box-shadow: 10px 10px 0px #666666;
+        box-shadow: 10px 10px 0px #666666;
+    }
+
+    .heading {
+        color: black;
+        padding-bottom: 2em;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .input {
+        border-radius: 5px;
+        border: 1px solid whitesmoke;
+        background-color: whitesmoke;
+        outline: none;
+        padding: 0.7em;
+        -webkit-transition: .4s ease-in-out;
+        transition: .4s ease-in-out;
+    }
+
+    .input:hover {
+        -webkit-box-shadow: 6px 6px 0px #969696,
+        -3px -3px 10px #ffffff;
+        box-shadow: 6px 6px 0px #969696,
+        -3px -3px 10px #ffffff;
+    }
+
+    .input:focus {
+        background: #ffffff;
+        -webkit-box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
+        box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .form .btn {
+        margin-top: 2em;
+        -ms-flex-item-align: center;
+        align-self: center;
+        padding: 0.7em;
+        padding-left: 1em;
+        padding-right: 1em;
+        border-radius: 10px;
+        border: none;
+        color: black;
+        -webkit-transition: .4s ease-in-out;
+        transition: .4s ease-in-out;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 1px;
+        box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 1px;
+    }
+
+    .form .btn:hover {
+        -webkit-box-shadow: 6px 6px 0px #969696,
+        -3px -3px 10px #ffffff;
+        box-shadow: 6px 6px 0px #969696,
+        -3px -3px 10px #ffffff;
+        -webkit-transform: translateX(-0.5em) translateY(-0.5em);
+        -ms-transform: translateX(-0.5em) translateY(-0.5em);
+        transform: translateX(-0.5em) translateY(-0.5em);
+    }
+
+    .form .btn:active {
+        -webkit-transition: .2s;
+        transition: .2s;
+        -webkit-transform: translateX(0em) translateY(0em);
+        -ms-transform: translateX(0em) translateY(0em);
+        transform: translateX(0em) translateY(0em);
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }</style>
+    <!-- Header-->
+    <header class="bg-dark py-5">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="text-center text-white">
+                <h1 class="display-4 fw-bolder">Login</h1>
+                <p class="lead fw-normal text-white-50 mb-0">Login To Your Account</p>
+            </div>
+        </div>
+    </header>
+    <br>
+    <center>
+        <div class="container px-4 px-lg-5 my-5" style="  min-height: 30px;
+  min-width: 30px; max-height: max-content;
+  max-width: max-content;
+
+ ">
+
+            <form class="form" id="login" method="POST" action="{% url 'login' %}">
+                {% csrf_token %}
+
+
+                <p class="heading">Login</p>
+                <input class="input" placeholder="Username" type="text" name="username">
+                <br>
+                <input class="input" placeholder="Password" type="password" name="password">
+                <br>
+                <button class="btn" type="submit">Submit</button>
+
+            </form>
+
+        </div>
+        <br>
+        <br>
+    </center>
+   
+{% endblock %}
