@@ -1,7 +1,7 @@
 from django.contrib import admin
 
-import autuser
-from autuser.models import User
+import authuser
+from authuser.models import User
 
 # Register your models here.
 
