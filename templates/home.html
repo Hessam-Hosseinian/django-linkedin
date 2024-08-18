@@ -5,49 +5,49 @@
         {#---------------------left-sidebar---------------------#}
         <div class="left-sidebar">
             <div class="sidebar-profile-box">
-                <img src="../static/icons/default_background.jpeg" alt="coversda" width="100%">
+                <img src="{{ authuser.background_picture.url }}" width="100%">
                 <div class="sidebar-profile-info">
-                    <img src="../static/icons/photo.jpg">
-                    <h1>Hessam Hosseinian</h1>
-                    <h3>Amirkabir university student</h3>
+                    <img src="{{authuser.profile_picture.url}}">
+                    <h1>{{ authuser.first_name }} {{ authuser.last_name }}</h1>
+                    <h3>{{ authuser.title }}</h3>
                     <ul>
-                        <li>Your profile views <span>52</span></li>
-                        <li>Your post views <span>323</span></li>
-                        <li>Your connections <span>231</span></li>
+                        <li>Your profile views <span>52</span></li>{# todo #}
+                        <li>Your post views <span>323</span></li>{# todo #}
+                        <li>Your connections <span>231</span></li>{# todo #}
 
                     </ul>
                 </div>
                 <div class="sidebar-profile-link">
                     <a href=""><img src="../static/icons/bookmark.png">Saved items</a>
-                    <a href=""><img src="../static/icons/bookmark.png">Saved items</a>
+                    <a href=""><img src="../static/icons/bookmark.png">Saved items</a>{# todo #}
 
 
                 </div>
             </div>
             <div class="sidebar-activity">
                 <h3>RECENT</h3>
-                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>
-                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>
-                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>
-                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>
-                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>
+                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>{# todo #}
+                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>{# todo #}
+                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>{# todo #}
+                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>{# todo #}
+                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>{# todo #}
                 <br>
                 <hr>
                 <h3>GROUPS</h3>
-                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>
-                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>
-                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>
-                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>
+                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>{# todo #}
+                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>{# todo #}
+                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>{# todo #}
+                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>{# todo #}
                 <br>
                 <hr>
                 <h3>HASHTAG</h3>
-                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>
-                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>
-                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>
-                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>
+                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>{# todo #}
+                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>{# todo #}
+                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>{# todo #}
+                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>{# todo #}
 
                 <div class="discover-more-link">
-                    <a href="">Discover More</a>
+                    <a href="">Discover More</a>{# todo #}
                 </div>
 
             </div>
@@ -57,13 +57,13 @@
         <div class="main-content">
             <div class="create-post">
                 <div class="create-post-input">
-                    <img src="../static/icons/photo.jpg" alt="">
+                    <img src="{{ authuser.profile_PICTURE.URL }}">
                     <textarea rows="2" placeholder="Write a post"></textarea>
                 </div>
                 <div class="create-post-links">
-                    <li><img src="../static/icons/photo.jpg" alt="">Photo</li>
-                    <li><img src="../static/icons/photo.jpg" alt="">Video</li>
-                    <li><img src="../static/icons/photo.jpg" alt="">Event</li>
+                    <li><img src="../static/icons/photo.jpg" alt="">Photo</li>{# todo #}
+                    <li><img src="../static/icons/photo.jpg" alt="">Video</li>{# todo #}
+                    <li><img src="../static/icons/photo.jpg" alt="">Event</li>{# todo #}
                     <li>Post</li>
                 </div>
             </div>
@@ -87,35 +87,35 @@
 
                     <div class="post-stats">
                         <div>
-                            <img src="../static/icons/heart(2).png">
-                            <img src="../static/icons/heart(2).png">
-                            <img src="../static/icons/heart(2).png">
-                            <span class="liked-user">Hessam and 75 others</span>
+                            <img src="../static/icons/heart(2).png">{# todo #}
+                            <img src="../static/icons/heart(2).png">{# todo #}
+                            <img src="../static/icons/heart(2).png">{# todo #}
+                            <span class="liked-user">Hessam and 75 others</span>{# todo #}
                         </div>
                         <div>
-                            <span>22 commented &middot; 40 shares</span>
+                            <span>22 commented &middot; 40 shares</span>{# todo #}
                         </div>
 
                     </div>
                     <div class="post-activity">
                         <div>
-                            <img src="../static/icons/photo.jpg" class="post-activity-user-icon">
+                            <img src="{{ authuser.profile_picture.url }}" class="post-activity-user-icon">
                             <img src="../static/icons/down-arrow.png" class="post-activity-arrow-icon">
                         </div>
                         <div class="post-activity-link">
-                            <img src="../static/icons/heart(2).png">
+                            <img src="../static/icons/heart(2).png">{# todo #}
                             <span>Like</span>
                         </div>
                         <div class="post-activity-link">
-                            <img src="../static/icons/heart(2).png">
+                            <img src="../static/icons/heart(2).png">{# todo #}
                             <span>Comment</span>
                         </div>
                         <div class="post-activity-link">
-                            <img src="../static/icons/heart(2).png">
+                            <img src="../static/icons/heart(2).png">{# todo #}
                             <span>Share</span>
                         </div>
                         <div class="post-activity-link">
-                            <img src="../static/icons/heart(2).png">
+                            <img src="../static/icons/heart(2).png">{# todo #}
                             <span>Send</span>
                         </div>
                     </div>
@@ -126,12 +126,12 @@
             </div>
 
         </div>
-        {#---------------------right-sidebar---------------------#}
+        {#---------------------right-sidebar---------------------#}{# todo #}
         <div class="right-sidebar">
 
 
             <div class="sidebar-news">
-                <img src="../static/icons/notification.png" alt="" class="info-icon">
+                <img src="../static/icons/notification.png" alt="" class="info-icon">{# todo #}
                 <h3>Trending News</h3>
                 <a href="">High demand for skilled manpower</a>
                 <span>1d ago &middot; 10,934 readers</span>

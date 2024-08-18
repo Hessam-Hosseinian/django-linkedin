@@ -29,16 +29,17 @@ class CustomUserManager(UserManager):
 
 class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(unique=True, blank=True, default='')
-    user_name = models.CharField(max_length=255, unique=True ,default='')
+    user_name = models.CharField(max_length=255, unique=True, default='')
     first_name = models.CharField(max_length=50, blank=True, default='')
     last_name = models.CharField(max_length=50, blank=True, default='')
     additional_name = models.CharField(max_length=50, blank=True, default='')
     title = models.CharField(max_length=50, blank=True, default='')
-    profile_picture = models.ImageField(upload_to='profile_pictures/', null=True, blank=True ,default='../static/icons/Default_Profile_Picture.png')
-    background_picture = models.ImageField(upload_to='background_pictures/', null=True, blank=True)
+    profile_picture = models.ImageField(upload_to='profile_pictures/', null=True, blank=True,
+                                        default='../static/icons/Default_Profile_Picture.png')
+    background_picture = models.ImageField(upload_to='background_pictures/', null=True, blank=True,
+                                           default='../static/icons/default_background.jpeg')
     country = models.CharField(max_length=50, blank=True, default='')
     city = models.CharField(max_length=50, blank=True, default='')
-
 
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
