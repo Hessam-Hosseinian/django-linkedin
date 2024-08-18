@@ -1,0 +1,180 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+
+        {#---------------------left-sidebar---------------------#}
+        <div class="left-sidebar">
+            <div class="sidebar-profile-box">
+                <img src="../static/icons/default_background.jpeg" alt="coversda" width="100%">
+                <div class="sidebar-profile-info">
+                    <img src="../static/icons/photo.jpg">
+                    <h1>Hessam Hosseinian</h1>
+                    <h3>Amirkabir university student</h3>
+                    <ul>
+                        <li>Your profile views <span>52</span></li>
+                        <li>Your post views <span>323</span></li>
+                        <li>Your connections <span>231</span></li>
+
+                    </ul>
+                </div>
+                <div class="sidebar-profile-link">
+                    <a href=""><img src="../static/icons/bookmark.png">Saved items</a>
+                    <a href=""><img src="../static/icons/bookmark.png">Saved items</a>
+
+
+                </div>
+            </div>
+            <div class="sidebar-activity">
+                <h3>RECENT</h3>
+                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>
+                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>
+                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>
+                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>
+                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>
+                <br>
+                <hr>
+                <h3>GROUPS</h3>
+                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>
+                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>
+                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>
+                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>
+                <br>
+                <hr>
+                <h3>HASHTAG</h3>
+                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>
+                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>
+                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>
+                <a href=""> <img src="../static/icons/logo.svg">Web Development</a>
+
+                <div class="discover-more-link">
+                    <a href="">Discover More</a>
+                </div>
+
+            </div>
+
+        </div>
+        {#---------------------main-content---------------------#}
+        <div class="main-content">
+            <div class="create-post">
+                <div class="create-post-input">
+                    <img src="../static/icons/photo.jpg" alt="">
+                    <textarea rows="2" placeholder="Write a post"></textarea>
+                </div>
+                <div class="create-post-links">
+                    <li><img src="../static/icons/photo.jpg" alt="">Photo</li>
+                    <li><img src="../static/icons/photo.jpg" alt="">Video</li>
+                    <li><img src="../static/icons/photo.jpg" alt="">Event</li>
+                    <li>Post</li>
+                </div>
+            </div>
+            <div class="post">
+                {% for post in posts %}
+                    <div class="post-author">
+                        <img src="{{ post.author.profile_picture.url }}">
+                        <div>
+                            <h1>{{ post.author }}</h1>
+                            <small>{{ post.author.title }}</small>
+                            <small>{{ post.date_posted }}</small>
+
+
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p>{{ post.content }}</p>
+                        {% if post.image %}
+                            <img src="{{ post.image.url }}" width="100%"></div>
+                        {% endif %}
+
+                    <div class="post-stats">
+                        <div>
+                            <img src="../static/icons/heart(2).png">
+                            <img src="../static/icons/heart(2).png">
+                            <img src="../static/icons/heart(2).png">
+                            <span class="liked-user">Hessam and 75 others</span>
+                        </div>
+                        <div>
+                            <span>22 commented &middot; 40 shares</span>
+                        </div>
+
+                    </div>
+                    <div class="post-activity">
+                        <div>
+                            <img src="../static/icons/photo.jpg" class="post-activity-user-icon">
+                            <img src="../static/icons/down-arrow.png" class="post-activity-arrow-icon">
+                        </div>
+                        <div class="post-activity-link">
+                            <img src="../static/icons/heart(2).png">
+                            <span>Like</span>
+                        </div>
+                        <div class="post-activity-link">
+                            <img src="../static/icons/heart(2).png">
+                            <span>Comment</span>
+                        </div>
+                        <div class="post-activity-link">
+                            <img src="../static/icons/heart(2).png">
+                            <span>Share</span>
+                        </div>
+                        <div class="post-activity-link">
+                            <img src="../static/icons/heart(2).png">
+                            <span>Send</span>
+                        </div>
+                    </div>
+
+                {% endfor %}
+
+
+            </div>
+
+        </div>
+        {#---------------------right-sidebar---------------------#}
+        <div class="right-sidebar">
+
+
+            <div class="sidebar-news">
+                <img src="../static/icons/notification.png" alt="" class="info-icon">
+                <h3>Trending News</h3>
+                <a href="">High demand for skilled manpower</a>
+                <span>1d ago &middot; 10,934 readers</span>
+
+                <a href="">High demand for skilled manpower</a>
+                <span>1d ago &middot; 10,934 readers</span>
+
+                <a href="">High demand for skilled manpower</a>
+                <span>1d ago &middot; 10,934 readers</span>
+
+                <a href="">High demand for skilled manpower</a>
+                <span>1d ago &middot; 10,934 readers</span>
+                <a href="" class="read-more-link">Read More</a>
+            </div>
+            <div class="sidebar-ad">
+
+                <small>Ad &middot; &middot; &middot;</small>
+                <p>Master the 5 priciples of web design</p>
+                <div>
+                    <img src="../static/icons/photo.jpg">
+                    <img src="../static/icons/logo.svg">
+
+                </div>
+                <b>brand and demand</b>
+                <a href="" class="ad-link">Learn more</a>
+            </div>
+
+            <div class="sidebar-useful-links">
+                <a href="">About</a>
+                <a href="">Accessibility</a>
+                <a href="">Help Center</a>
+                <a href="">Privacy Policy</a>
+                <a href="">Advertising</a>
+                <a href="">Get the App</a>
+                <a href="">More</a>
+                <div class="copyright-msg">
+                    <img src="../static/icons/logo.svg">
+                    <p>Linkedin &#169 2024. All right reserved</p>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+{% endblock %}
