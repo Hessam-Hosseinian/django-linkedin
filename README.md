@@ -27,6 +27,26 @@ It should be noted that this project is under development and there is a possibi
 - **Frontend**: Django Templates, Bootstrap (for styling), HTML, CSS
 - **Database**: SQLite (default with Django)
 
+## Screenshots
+
+<div>
+main page
+  <br>
+  <br>
+<img src="screenshots/img.png" width="700" />
+<br > <br > <br > <br > 
+<hr>
+admin workbench
+<br>
+<br>
+<img src="screenshots/img_1.png" width="300" />
+ 
+
+</div>
+
+
+
+
 ## Setup Instructions
 
 To run this project locally, follow these steps:
