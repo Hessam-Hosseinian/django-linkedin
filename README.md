@@ -1,5 +1,5 @@
 
-# LinkedIn Simulation (Django Project) Working in progress
+# LinkedIn Clone (Django Project) Working in progress
 
 ## Overview
 
