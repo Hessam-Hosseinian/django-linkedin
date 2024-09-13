@@ -4,7 +4,7 @@
         <a href="#" class="logo"><img src="../static/icons/logo.svg" alt="linkedin logo"></a>
         <div class="search-box">
             <img src="../static/icons/search.svg" alt="searchicon">
-            <input  type="text" placeholder="Search">
+            <input type="text" placeholder="Search">
         </div>
     </div>
     <div class="navbar-center">
@@ -20,7 +20,9 @@
 
     <div class="navbar-right">
         <div class="online">
-            <img src="{{ authuser.profile_picture.url }}" class="nav-profile-img">
+            <a href="{% url 'logout' %}"><img src="{{ authuser.profile_picture.url }}" class="nav-profile-img" ></a>
+            
+            
         </div>
 
     </div>
