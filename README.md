@@ -76,7 +76,9 @@ To run this project locally, follow these steps:
     ```
 
 5. **Create a superuser** (for admin access):
+Follow the mentioned steps. The process is different from Django's predefined process
     ```bash
+    
     python manage.py createsuperuser
     ```
 
