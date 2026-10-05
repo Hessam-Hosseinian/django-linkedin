@@ -1,101 +1,133 @@
+# LinkedIn Clone — Django
 
-# LinkedIn Clone (Django Project) Working in progress
+An in-progress **LinkedIn-style web application** built with Django as a learning project.
 
-## Overview
+The repository focuses on authentication, profiles, a basic feed, and post-related functionality while leaving several social-network features for future development.
 
-This is a LinkedIn simulation built using the Django framework. The project aims to provide core functionalities similar to LinkedIn, including user profiles, job postings, connections, and messaging. Please note that this project is still in development, and several key features are yet to be completed.
+## Current status
 
-It should be noted that this project is under development and there is a possibility of disruption, including disruption in some static files.
-## Current Status
+### Implemented / partially implemented
 
-- **User authentication** (login, signup, logout) is functional.
-- **Basic profile creation** is implemented.
-- **Home page** with basic feed structure is in place.
+- User sign up, login, and logout
+- Basic user profiles
+- Home/feed structure
+- Django admin integration
+- Post application and related templates/static assets
+- Screenshot examples in `screenshots/`
 
-  
-**Work still to be done:**
-- **Post creation** is partially implemented.
-- Enhancements to user profiles.
-- Implementation of connection requests and network building.
-- Messaging between users.
-- Job posting and job search functionalities.
-- Feed improvements (likes, comments, and shares).
-  
-## Technologies Used
+### Planned / incomplete
 
-- **Backend**: Django
-- **Frontend**: Django Templates, Bootstrap (for styling), HTML, CSS
-- **Database**: SQLite (default with Django)
+- More complete post creation and interaction flows
+- Profile improvements
+- Connection requests and network building
+- Messaging
+- Job posting and job search
+- Likes, comments, and sharing
+- General UI/static-file cleanup
+
+> This repository is a **work in progress**. Some pages or static assets may be incomplete.
+
+## Tech stack
+
+- Python
+- Django
+- Django Templates
+- HTML / CSS
+- Bootstrap
+- SQLite for local development
+
+## Repository structure
+
+```text
+.
+├── manage.py
+├── linkedin/       # Django project configuration
+├── authuser/       # Authentication / user-related app
+├── post/           # Post-related app
+├── templates/
+├── static/
+├── screenshots/
+└── requirement.txt
+```
+
+## Getting started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Hessam-Hosseinian/django-linkedin.git
+cd django-linkedin
+```
+
+### 2. Create and activate a virtual environment
+
+```bash
+python -m venv .venv
+```
+
+Linux/macOS:
+
+```bash
+source .venv/bin/activate
+```
+
+Windows:
+
+```powershell
+.venv\Scripts\activate
+```
+
+### 3. Install dependencies
+
+The repository currently uses the singular filename `requirement.txt`:
+
+```bash
+pip install -r requirement.txt
+```
+
+### 4. Apply migrations
+
+```bash
+python manage.py migrate
+```
+
+### 5. Create an admin user
+
+```bash
+python manage.py createsuperuser
+```
+
+### 6. Start the development server
+
+```bash
+python manage.py runserver
+```
+
+Open:
+
+```text
+http://127.0.0.1:8000/
+```
 
 ## Screenshots
 
-<div>
-main page
-  <br>
-  <br>
-<img src="screenshots/img.png" width="700" />
-<br > <br > <br > <br > 
-<hr>
-admin workbench
-<br>
-<br>
-<img src="screenshots/img_1.png" width="300" />
- 
+### Main page
 
-</div>
+<img src="screenshots/img.png" width="700" alt="LinkedIn clone main page">
 
+### Django admin
 
+<img src="screenshots/img_1.png" width="420" alt="Django admin">
 
+## Contributing
 
-## Setup Instructions
+This is primarily a learning/portfolio repository, but pull requests and suggestions are welcome.
 
-To run this project locally, follow these steps:
-
-1. **Clone the repository**:
-    ```bash
-    git clone https://github.com/Hessam-Hosseinian/django-linkedin.git
-    cd django-linkedin
-    ```
-
-2. **Set up a virtual environment**:
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # For Linux/macOS
-    # For Windows
-    venv\Scripts\activate
-    ```
-
-3. **Install dependencies**:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4. **Run database migrations**:
-    ```bash
-    python manage.py migrate
-    ```
-
-5. **Create a superuser** (for admin access):
-Follow the mentioned steps. The process is different from Django's predefined process
-    ```bash
-    
-    python manage.py createsuperuser
-    ```
-
-6. **Run the Django development server**:
-    ```bash
-    python manage.py runserver
-    ```
-
-7. **Access the application**:
-    Open your browser and go to `http://localhost:8000/`.
-
-## How to Contribute
-
-Since this project is still in development, contributions are welcome! To contribute:
 1. Fork the repository.
-2. Create a new branch (`feature/your-feature-name`).
-3. Commit your changes.
-4. Open a pull request.
+2. Create a feature branch.
+3. Make and test your changes.
+4. Open a pull request with a short description of the change.
 
+## License
 
+No open-source license is currently provided.
